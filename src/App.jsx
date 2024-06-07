@@ -1,31 +1,31 @@
 import React, { useState } from 'react';
-import Todos from './components/Todos'; // Menggabungkan impor dari create_todos_and_todoItem_component
+import Todos from './components/Todos';
 
 function App() {
   const [todos, setTodos] = useState([
     {
       id: 1,
       title: 'Finish Progate React Course',
+      date: 'Senin, 21 Mei 2024',
       completed: false,
     },
     {
       id: 2,
       title: 'Have lunch with Guru Domba',
+      date: 'Senin, 21 Mei 2024',
       completed: false,
     },
     {
       id: 3,
       title: 'Study React with Ninja Ken',
+      date: 'Senin, 21 Mei 2024',
       completed: false,
     },
   ]);
 
-  console.log(todos);
-
   return (
-    <div>
-      <h1>My Todo List</h1>
-      {/* Menggunakan komponen Todos untuk merender daftar todos */}
+    <div className='mx-32 mt-10 p-20 bg-purple-400 rounded-xl'>
+      <h1 className='mb-5 text-white font-bold text-xl border-b-2'>My Todo List</h1>
       <Todos todos={todos} />
     </div>
   );
