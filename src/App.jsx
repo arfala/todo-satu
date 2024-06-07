@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import Todos from './components/Todos'; // Menggabungkan impor dari create_todos_and_todoItem_component
 
 function App() {
   const [todos, setTodos] = useState([
@@ -17,18 +18,17 @@ function App() {
       title: 'Study React with Ninja Ken',
       completed: false,
     },
-  ])
+  ]);
 
-  console.log(todos)
+  console.log(todos);
 
   return (
     <div>
       <h1>My Todo List</h1>
-      {todos.map((todo) => {
-        return <p key={todo.id}>{todo.title}</p>
-      })}
+      {/* Menggunakan komponen Todos untuk merender daftar todos */}
+      <Todos todos={todos} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
